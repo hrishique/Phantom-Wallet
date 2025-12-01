@@ -1,22 +1,26 @@
 /**
  * Brand Theme Colors
  * Single source of truth for all color tokens
+ * Updated for Phantom SDK v1.0.0-beta.22 multi-chain support
  */
 export const colors = {
   // Primary brand colors
   ink: '#0f172a',
-  brand: '#0ea5e9',
+  brand: '#6366f1',  // Indigo - matches brand guidelines
   paper: '#ffffff',
   
-  // Secondary colors
+  // Secondary colors for multi-chain UI
   yellow: '#eab308',
-  blue: '#3b82f6',
+  blue: '#3b82f6',      // Ethereum chain color
   coral: '#f87171',
   green: '#22c55e',
   slate: '#64748b',
   orange: '#f97316',
   vanilla: '#fef3c7',
   navy: '#1e293b',
+  lavender: '#a78bfa',  // Solana/Phantom chain color
+  pink: '#ec4899',
+  plum: '#7c3aed',
   
   // Grays
   gray100: '#f3f4f6',
@@ -58,6 +62,7 @@ export const darkColors = {
   warning: colors.orange,
   error: colors.coral,
 };
+
 
 
 

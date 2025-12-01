@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   TouchableOpacity,
@@ -9,32 +9,44 @@ import {
 } from 'react-native';
 import { useConnect, useAccounts } from '@phantom/react-native-sdk';
 import { useRouter } from 'expo-router';
+import { Ionicons, AntDesign } from '@expo/vector-icons';
 import { colors } from '@/lib/theme';
+
+// Available authentication providers for mobile
+type AuthProvider = 'google' | 'apple';
 
 /**
  * ConnectButton component handles Phantom wallet authentication
  * Uses Phantom Connect (OAuth) to create/connect an embedded user wallet
- * Supports Google and Apple authentication
+ * Supports Google and Apple authentication for mobile
  */
 export function ConnectButton() {
   const { connect, isConnecting } = useConnect();
   const { isConnected } = useAccounts();
   const router = useRouter();
+  const [activeProvider, setActiveProvider] = useState<AuthProvider | null>(null);
+  // Only track errors from user-initiated connections, not auto-connect
+  const [userError, setUserError] = useState<string | null>(null);
 
   /**
    * Initiates Phantom Connect flow with specific provider
    * On success, navigates to wallet screen
    */
-  const handleConnect = async (provider: 'google' | 'apple') => {
+  const handleConnect = async (provider: AuthProvider) => {
+    setActiveProvider(provider);
+    setUserError(null);
     try {
       await connect({ provider });
       router.push('/wallet');
     } catch (error: any) {
       console.error('Connection failed:', error);
-      // Only show alert if error is not user cancellation
+      // Only show error if not user cancellation
       if (error?.message && !error.message.includes('cancelled')) {
+        setUserError(error.message);
         Alert.alert('Connection Failed', error.message);
       }
+    } finally {
+      setActiveProvider(null);
     }
   };
 
@@ -45,35 +57,44 @@ export function ConnectButton() {
 
   return (
     <View style={styles.container}>
+      {/* Google authentication */}
       <TouchableOpacity
         style={[styles.button, styles.googleButton]}
         onPress={() => handleConnect('google')}
         disabled={isConnecting}
       >
-        {isConnecting ? (
+        {activeProvider === 'google' && isConnecting ? (
           <ActivityIndicator color="#fff" />
         ) : (
           <View style={styles.buttonContent}>
-            <Text style={styles.logo}>G</Text>
+            <AntDesign name="google" size={20} color="#fff" style={styles.icon} />
             <Text style={styles.buttonText}>Continue with Google</Text>
           </View>
         )}
       </TouchableOpacity>
 
+      {/* Apple authentication */}
       <TouchableOpacity
         style={[styles.button, styles.appleButton]}
         onPress={() => handleConnect('apple')}
         disabled={isConnecting}
       >
-        {isConnecting ? (
+        {activeProvider === 'apple' && isConnecting ? (
           <ActivityIndicator color="#fff" />
         ) : (
           <View style={styles.buttonContent}>
-            <Text style={styles.logo}></Text>
+            <Ionicons name="logo-apple" size={22} color="#fff" style={styles.icon} />
             <Text style={styles.buttonText}>Continue with Apple</Text>
           </View>
         )}
       </TouchableOpacity>
+
+      {/* Error display - only show user-initiated errors */}
+      {userError && (
+        <Text style={styles.errorText}>
+          Error: {userError}
+        </Text>
+      )}
     </View>
   );
 }
@@ -82,7 +103,7 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     maxWidth: 300,
-    gap: 12,
+    gap: 8,
   },
   button: {
     paddingVertical: 16,
@@ -90,14 +111,11 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     alignItems: 'center',
     width: '100%',
-    marginBottom: 12,
     borderWidth: 1,
-    borderColor: colors.gray200,
-    backgroundColor: colors.paper,
     shadowColor: '#00000014',
-    shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.08,
-    shadowRadius: 20,
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.1,
+    shadowRadius: 16,
     elevation: 2,
   },
   buttonContent: {
@@ -105,11 +123,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  logo: {
-    fontSize: 20,
-    marginRight: 8,
-    fontWeight: 'bold',
-    color: colors.paper,
+  icon: {
+    marginRight: 10,
   },
   googleButton: {
     backgroundColor: colors.brand,
@@ -124,5 +139,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
   },
+  errorText: {
+    color: colors.coral,
+    fontSize: 12,
+    textAlign: 'center',
+    marginTop: 8,
+  },
 });
-
