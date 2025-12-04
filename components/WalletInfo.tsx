@@ -15,6 +15,7 @@ import {
   useDisconnect, 
   useSolana, 
   useEthereum,
+  useModal,
   AddressType,
 } from '@phantom/react-native-sdk';
 import { useRouter } from 'expo-router';
@@ -28,12 +29,14 @@ const PhantomLogo = require('@/assets/default.png');
 /**
  * WalletInfo component - Dashboard for connected multi-chain wallet
  * Displays Solana & Ethereum wallet addresses, balances, and signing capabilities
+ * Updated for SDK v1.0.0-beta.26 with modal integration
  */
 export function WalletInfo() {
   const { addresses, isConnected, walletId } = useAccounts();
   const { disconnect, isDisconnecting } = useDisconnect();
   const { solana, isAvailable: isSolanaAvailable } = useSolana();
   const { ethereum, isAvailable: isEthereumAvailable } = useEthereum();
+  const modal = useModal();
   const router = useRouter();
   
   const [solBalance, setSolBalance] = useState<number | null>(null);
@@ -43,12 +46,14 @@ export function WalletInfo() {
   const solanaAccount = addresses?.find(addr => addr.addressType === AddressType.solana);
   const ethereumAccount = addresses?.find(addr => addr.addressType === AddressType.ethereum);
 
+  // Redirect to home if disconnected
   useEffect(() => {
     if (!isConnected) {
       router.replace('/');
     }
   }, [isConnected]);
 
+  // Fetch Solana balance when account is available
   useEffect(() => {
     if (solanaAccount?.address) {
       fetchBalance(solanaAccount.address);
@@ -117,6 +122,7 @@ export function WalletInfo() {
     Linking.openURL('https://docs.phantom.com');
   };
 
+  // Loading state while fetching wallet info
   if (!solanaAccount && !ethereumAccount) {
     return (
       <View style={styles.loadingContainer}>
@@ -136,6 +142,14 @@ export function WalletInfo() {
           <Text style={styles.walletId}>{walletId.slice(0, 8)}...{walletId.slice(-4)}</Text>
         )}
       </View>
+
+      {/* Account Settings Button - Opens SDK Modal */}
+      <TouchableOpacity
+        style={styles.manageButton}
+        onPress={() => modal.open()}
+      >
+        <Text style={styles.manageButtonText}>Account Settings</Text>
+      </TouchableOpacity>
 
       {/* Solana Card */}
       {solanaAccount && (
@@ -275,6 +289,19 @@ const styles = StyleSheet.create({
     color: colors.gray400,
     marginTop: 4,
     fontFamily: 'monospace',
+  },
+  manageButton: {
+    marginHorizontal: 16,
+    marginBottom: 16,
+    backgroundColor: colors.brand,
+    paddingVertical: 14,
+    borderRadius: 12,
+    alignItems: 'center',
+  },
+  manageButtonText: {
+    color: '#fff',
+    fontSize: 15,
+    fontWeight: '600',
   },
   chainCard: {
     marginHorizontal: 16,

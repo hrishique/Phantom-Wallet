@@ -1,54 +1,36 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import {
   View,
   TouchableOpacity,
   Text,
-  ActivityIndicator,
   StyleSheet,
-  Alert,
+  Image,
 } from 'react-native';
-import { useConnect, useAccounts } from '@phantom/react-native-sdk';
-import { useRouter } from 'expo-router';
-import { Ionicons, AntDesign } from '@expo/vector-icons';
+import { useModal, useAccounts } from '@phantom/react-native-sdk';
 import { colors } from '@/lib/theme';
 
-// Available authentication providers for mobile
-type AuthProvider = 'google' | 'apple';
+// Use the light.png - lavender ghost on transparent background
+const PhantomGhost = require('@/assets/light.png');
 
 /**
  * ConnectButton component handles Phantom wallet authentication
- * Uses Phantom Connect (OAuth) to create/connect an embedded user wallet
- * Supports Google and Apple authentication for mobile
+ * Uses the new SDK modal (v1.0.0-beta.26) for wallet connection
+ * Modal supports Google and Apple authentication
  */
 export function ConnectButton() {
-  const { connect, isConnecting } = useConnect();
+  const modal = useModal();
   const { isConnected } = useAccounts();
-  const router = useRouter();
-  const [activeProvider, setActiveProvider] = useState<AuthProvider | null>(null);
-  // Only track errors from user-initiated connections, not auto-connect
-  const [userError, setUserError] = useState<string | null>(null);
 
-  /**
-   * Initiates Phantom Connect flow with specific provider
-   * On success, navigates to wallet screen
-   */
-  const handleConnect = async (provider: AuthProvider) => {
-    setActiveProvider(provider);
-    setUserError(null);
-    try {
-      await connect({ provider });
-      router.push('/wallet');
-    } catch (error: any) {
-      console.error('Connection failed:', error);
-      // Only show error if not user cancellation
-      if (error?.message && !error.message.includes('cancelled')) {
-        setUserError(error.message);
-        Alert.alert('Connection Failed', error.message);
-      }
-    } finally {
-      setActiveProvider(null);
+  // Auto-open modal when component mounts (if not connected)
+  useEffect(() => {
+    if (!isConnected && !modal.isOpened) {
+      // Small delay to ensure smooth transition
+      const timer = setTimeout(() => {
+        modal.open();
+      }, 500);
+      return () => clearTimeout(timer);
     }
-  };
+  }, []);
 
   // Hide button if already connected
   if (isConnected) {
@@ -57,44 +39,20 @@ export function ConnectButton() {
 
   return (
     <View style={styles.container}>
-      {/* Google authentication */}
+      {/* Login button - clean minimal design with Phantom ghost */}
       <TouchableOpacity
-        style={[styles.button, styles.googleButton]}
-        onPress={() => handleConnect('google')}
-        disabled={isConnecting}
+        style={styles.button}
+        onPress={() => modal.open()}
+        activeOpacity={0.85}
       >
-        {activeProvider === 'google' && isConnecting ? (
-          <ActivityIndicator color="#fff" />
-        ) : (
-          <View style={styles.buttonContent}>
-            <AntDesign name="google" size={20} color="#fff" style={styles.icon} />
-            <Text style={styles.buttonText}>Continue with Google</Text>
-          </View>
-        )}
+        <Image source={PhantomGhost} style={styles.ghost} resizeMode="contain" />
+        <Text style={styles.buttonText}>Login with Phantom</Text>
       </TouchableOpacity>
 
-      {/* Apple authentication */}
-      <TouchableOpacity
-        style={[styles.button, styles.appleButton]}
-        onPress={() => handleConnect('apple')}
-        disabled={isConnecting}
-      >
-        {activeProvider === 'apple' && isConnecting ? (
-          <ActivityIndicator color="#fff" />
-        ) : (
-          <View style={styles.buttonContent}>
-            <Ionicons name="logo-apple" size={22} color="#fff" style={styles.icon} />
-            <Text style={styles.buttonText}>Continue with Apple</Text>
-          </View>
-        )}
-      </TouchableOpacity>
-
-      {/* Error display - only show user-initiated errors */}
-      {userError && (
-        <Text style={styles.errorText}>
-          Error: {userError}
-        </Text>
-      )}
+      {/* Info text about available providers */}
+      <Text style={styles.infoText}>
+        Sign in with Google or Apple
+      </Text>
     </View>
   );
 }
@@ -103,46 +61,41 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     maxWidth: 300,
-    gap: 8,
+    gap: 16,
+    alignItems: 'center',
   },
   button: {
-    paddingVertical: 16,
-    paddingHorizontal: 32,
-    borderRadius: 12,
-    alignItems: 'center',
-    width: '100%',
-    borderWidth: 1,
-    shadowColor: '#00000014',
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.1,
-    shadowRadius: 16,
-    elevation: 2,
-  },
-  buttonContent: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    width: '100%',
+    paddingVertical: 14,
+    paddingHorizontal: 24,
+    borderRadius: 16,
+    backgroundColor: colors.paper,
+    borderWidth: 2,
+    borderColor: colors.lavender,
+    // Subtle shadow for depth
+    shadowColor: colors.lavender,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 12,
+    elevation: 4,
   },
-  icon: {
-    marginRight: 10,
-  },
-  googleButton: {
-    backgroundColor: colors.brand,
-    borderColor: colors.brand,
-  },
-  appleButton: {
-    backgroundColor: colors.ink,
-    borderColor: colors.ink,
+  ghost: {
+    width: 32,
+    height: 32,
+    marginRight: 12,
   },
   buttonText: {
-    color: colors.paper,
-    fontSize: 16,
+    color: colors.ink,
+    fontSize: 17,
     fontWeight: '600',
+    letterSpacing: 0.3,
   },
-  errorText: {
-    color: colors.coral,
-    fontSize: 12,
+  infoText: {
+    fontSize: 13,
+    color: colors.gray400,
     textAlign: 'center',
-    marginTop: 8,
   },
 });

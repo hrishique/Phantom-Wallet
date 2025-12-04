@@ -11,6 +11,7 @@ const PhantomLogo = require('@/assets/default.png');
 /**
  * Home screen - displays welcome message and connect button
  * This is the entry point of the app where users initiate Phantom Connect
+ * Updated for SDK v1.0.0-beta.26 with modal support
  */
 export default function HomeScreen() {
   const { isConnected } = useAccounts();
@@ -37,7 +38,7 @@ export default function HomeScreen() {
       />
       <Text style={styles.title}>Phantom Embedded Wallet</Text>
       <Text style={styles.subtitle}>
-        Authenticate to create or connect your Phantom wallet and view balances instantly.
+        Login to create or access your Phantom wallet and view balances instantly.
       </Text>
       <ConnectButton />
       <TouchableOpacity onPress={handleExploreDocs} style={styles.linkButton}>

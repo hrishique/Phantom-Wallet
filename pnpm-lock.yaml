@@ -11,9 +11,12 @@ importers:
       '@babel/runtime':
         specifier: ^7.28.4
         version: 7.28.4
+      '@expo/vector-icons':
+        specifier: ^15.0.3
+        version: 15.0.3(expo-font@14.0.9(expo@54.0.25)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
       '@phantom/react-native-sdk':
-        specifier: 1.0.0-beta.22
-        version: 1.0.0-beta.22(bufferutil@4.0.9)(expo-auth-session@7.0.9(expo@54.0.25)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0))(expo-secure-store@15.0.7(expo@54.0.25))(expo-web-browser@15.0.9(expo@54.0.25)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(expo@54.0.25)(fastestsmallesttextencoderdecoder@1.0.22)(react-native-get-random-values@1.11.0(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
+        specifier: 1.0.0-beta.26
+        version: 1.0.0-beta.26(bufferutil@4.0.9)(expo-auth-session@7.0.9(expo@54.0.25)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0))(expo-secure-store@15.0.7(expo@54.0.25))(expo-web-browser@15.0.9(expo@54.0.25)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(expo@54.0.25)(fastestsmallesttextencoderdecoder@1.0.22)(react-native-get-random-values@1.11.0(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(react-native-svg@15.12.1(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
       '@solana/web3.js':
         specifier: ^1.95.0
         version: 1.98.4(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
@@ -50,6 +53,9 @@ importers:
       react-native-screens:
         specifier: ~4.16.0
         version: 4.16.0(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
+      react-native-svg:
+        specifier: 15.12.1
+        version: 15.12.1(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
     devDependencies:
       '@babel/core':
         specifier: ^7.20.0
@@ -820,37 +826,37 @@ packages:
     resolution: {integrity: sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A==}
     engines: {node: ^14.21.3 || >=16}
 
-  '@phantom/api-key-stamper@1.0.0-beta.10':
-    resolution: {integrity: sha512-lMv8ce66/iZW+pW2oyBWwFElRR0H/4X5HYM4PoDy2kpaZzXF3IRbuxAbzgewhGdSWT7Hn5vj1TULgDYCJp+gvQ==}
+  '@phantom/api-key-stamper@1.0.0-beta.14':
+    resolution: {integrity: sha512-MiWnqiWMA8Xx5dkiRw4mGOX2l9cY0sv05mCxiu6me3o8u/S0Mb/t9KSGauGjV+eIL2P7F0uCgfrVP8kR79KR4A==}
 
-  '@phantom/base64url@1.0.0-beta.10':
-    resolution: {integrity: sha512-0iQwIPSpr0rRZLNMrkrkGHQ7yP4i7lWB5jKeG1slG64TXiyPRBVzqx5XjnmONiGGFVtqvXpz+ffXd8lGevEqsQ==}
+  '@phantom/base64url@1.0.0-beta.14':
+    resolution: {integrity: sha512-ObEVCrlITCJvOW4o5gqonYAT7PugbJ3/LEK4dUTwrHv/3zZF2H6tERWs/hM8EEn0It6frHI/gXKbZGljRIfaKw==}
 
-  '@phantom/chain-interfaces@1.0.0-beta.10':
-    resolution: {integrity: sha512-GDSOVWY/YDsWJ5hx48beGSXw2T9Xb9GeGiR5i7IB1NPeE/Cgm7VhsKbRz3dKYm5/ygdWto3tUWTZdbEbnIqmVQ==}
+  '@phantom/chain-interfaces@1.0.0-beta.14':
+    resolution: {integrity: sha512-s1228ZAQA1JFUPp8wmYpHohCehHIiks612USbvlS/pqnjot70X3PP/FwypI2YxJuZZHn5o9BwAR/zdv7/6sOmA==}
 
-  '@phantom/client@1.0.0-beta.22':
-    resolution: {integrity: sha512-+584zsOb22DWsn5yrDVklKDXSTiJjijIZZRCwY0RaUkzrDAKbL1Gplt6ml0LFib4a5a+O5gpJH8Lo7hv4arNAg==}
+  '@phantom/client@1.0.0-beta.26':
+    resolution: {integrity: sha512-nmRp2HQN3RVXOX2qnaiX1uAfn1jZH0xlbqjRMq3eFqQXWjgKjqAdJjBorll8zzIr01dj8eg/o09fY7Nw5gqBbQ==}
 
-  '@phantom/constants@1.0.0-beta.10':
-    resolution: {integrity: sha512-2aTvDklNSV4Ft0WB89IQMwbI7sV2QMNf6Od5ufoVMHFLodUhiDKCWDyvd+SdG2VjzfYnmSMuTefwNBfScy3Yww==}
+  '@phantom/constants@1.0.0-beta.14':
+    resolution: {integrity: sha512-Tz3DuBkyJf+++bV5bxlK1WCo8BipZgvFbqpdt6Qi1TICW8ESKvbgFe98x4iN82UkMZEDfRRUEYcGpQKczQG1qw==}
 
-  '@phantom/crypto@1.0.0-beta.10':
-    resolution: {integrity: sha512-xzxywvTCViCICUBMqMgd+a7xAlWUMyjFMdp7Mdbs+VUl89tcUajEZ/KpLStMVMSCA20t8XzSOai8kcE1bzcrxA==}
+  '@phantom/crypto@1.0.0-beta.14':
+    resolution: {integrity: sha512-ry9CvVqYu1eKD242WGe/zYr+MDQRCbh+PCch/tcfVsyyIan3UBtHqgcvx/EzJs/meypktyaO46EyXXRp7m5pog==}
 
-  '@phantom/embedded-provider-core@1.0.0-beta.22':
-    resolution: {integrity: sha512-4oXmWv1y2Kar0FGsxQhkechb7GDlvU9U0FBHTpXJU6wUpdrMuWwFWQS1D+NznbT8a6ssMu6EKuDxzfdVAaAPqQ==}
+  '@phantom/embedded-provider-core@1.0.0-beta.26':
+    resolution: {integrity: sha512-CsmHvgi8CPwJ5uYlzMimeyx9UGpIlrjwNU5VyboehjTcbS/C/2VcS4y+hlJWDXgCDKkMCFbfm+m0iGXmfh/zkQ==}
     peerDependencies:
       typescript: '>=4.5.0'
 
   '@phantom/openapi-wallet-service@0.1.11':
     resolution: {integrity: sha512-EWu0qpzNjKNuO32tMYoD4Wy5yfsJdJ1OZu1RFBW7BXgFNt34t7oY0EFho5v3OPQ/jFfYDesaf6HG5cB4LYib8Q==}
 
-  '@phantom/parsers@1.0.0-beta.10':
-    resolution: {integrity: sha512-5PmlMnEWGhhe5mPfBc30ujJm1fbrK4WTygXrTFa2ViXp3Uv2N1s4HK+3VdmS21geioBV2ets8DavzbfYv3SnAw==}
+  '@phantom/parsers@1.0.0-beta.14':
+    resolution: {integrity: sha512-Y8kUnG5sLYBxNOiud4l+5hY46MoZKveceOaoze7Blr9Fd5jbAOCmInMJBxzBQLqNvQyVz3YZYPTdy4FgItRYmQ==}
 
-  '@phantom/react-native-sdk@1.0.0-beta.22':
-    resolution: {integrity: sha512-FQ3ROmml7StUeVbtCByMYhtW88xL11YqQzfwarBY1caSyRaXlvWBH+tAak6n7KNsObUfGzN8LrE+V7qFiGCn9A==}
+  '@phantom/react-native-sdk@1.0.0-beta.26':
+    resolution: {integrity: sha512-HWCOycHyAWOXMOsk0H+caDp7cevbkHMY0e2L/PYgJqcSRRHfuMHi4Wzt6Wycgjbmywy/2iR6/y7usd0rvwxqnQ==}
     peerDependencies:
       expo: '>=53.0.0'
       expo-auth-session: '>=5.0.0'
@@ -859,12 +865,25 @@ packages:
       react: '>=19.0.0'
       react-native: '>=0.79.0'
       react-native-get-random-values: '>=1.8.0'
+      react-native-svg: '>=15.0.0'
 
-  '@phantom/sdk-types@1.0.0-beta.10':
-    resolution: {integrity: sha512-cUg4yve/+XZY4puGbZg/n+hFUdNVod4gRj1m/n86KOD+rC6OEaIk+lYleCStOn4TiMfcImxPdYVAG8Izrf2vbg==}
+  '@phantom/sdk-types@1.0.0-beta.14':
+    resolution: {integrity: sha512-0Q1lSmz+HptsZntvlUw7tQeOtPEB62gl3fND4KPUjxdV0rVL2ekk/dqzjHXBiBS6b1ZzzEDaksszLKaiPleq+A==}
 
-  '@phantom/utils@1.0.0-beta.22':
-    resolution: {integrity: sha512-UdSRazTV91TYiGme3q8Ka8Nsa5K4owsSCQshFHDROeInhclFKYEqkyCx7gKFTl511+JvAySUpFpQ8LF8j4Pfcg==}
+  '@phantom/utils@1.0.0-beta.26':
+    resolution: {integrity: sha512-Oldrovk5yn6YINUijs1j4I5brUQvt6d6n7PLfLi2e2Of/ay6mbAntPw/BMjDbSO+yj+QeCLILVIfMHzipUVqIg==}
+
+  '@phantom/wallet-sdk-ui@1.0.0-beta.5':
+    resolution: {integrity: sha512-qOQFLqbrmexhCnHYbcOboCDDMEjBA08kExQOwo5tgnQVOzUY1d5gxPpUfH4jjaIfAjRJsH0hlkxmMl4Us1vlXQ==}
+    peerDependencies:
+      react: '>=19.0.0'
+      react-native: '>=0.79.0'
+      react-native-svg: '>=15.0.0'
+    peerDependenciesMeta:
+      react-native:
+        optional: true
+      react-native-svg:
+        optional: true
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -1604,6 +1623,9 @@ packages:
   bn.js@5.2.2:
     resolution: {integrity: sha512-v2YAxEmKaBLahNwE1mjp4WON6huMNeuDvagFZW+ASCuA/ku0bXR9hSMw0XpiqMoA3+rmnyck/tPRSFQkoC9Cuw==}
 
+  boolbase@1.0.0:
+    resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
+
   borsh@0.7.0:
     resolution: {integrity: sha512-CLCsZGIBCFnPtkNnieW/a8wmreDmfUtjU2m9yHrzPXIlNbqVs0AQrSatSG6vdNYUqdc83tkQi2eHfF98ubzQLA==}
 
@@ -1802,6 +1824,17 @@ packages:
     resolution: {integrity: sha512-v1plID3y9r/lPhviJ1wrXpLeyUIGAZ2SHNYTEapm7/8A9nLPoyvVp3RK/EPFqn5kEznyWgYZNsRtYYIWbuG8KA==}
     engines: {node: '>=8'}
 
+  css-select@5.2.2:
+    resolution: {integrity: sha512-TizTzUddG/xYLA3NXodFM0fSbNizXjOKhqiQQwvhlspadZokn1KDy0NZFS0wuEubIYAV5/c1/lAr0TaaFXEXzw==}
+
+  css-tree@1.1.3:
+    resolution: {integrity: sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q==}
+    engines: {node: '>=8.0.0'}
+
+  css-what@6.2.2:
+    resolution: {integrity: sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==}
+    engines: {node: '>= 6'}
+
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
@@ -1872,6 +1905,19 @@ packages:
   detect-node-es@1.1.0:
     resolution: {integrity: sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==}
 
+  dom-serializer@2.0.0:
+    resolution: {integrity: sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg==}
+
+  domelementtype@2.3.0:
+    resolution: {integrity: sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==}
+
+  domhandler@5.0.3:
+    resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
+    engines: {node: '>= 4'}
+
+  domutils@3.2.2:
+    resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
+
   dotenv-expand@11.0.7:
     resolution: {integrity: sha512-zIHwmZPRshsCdpMDyVsqGmgyP0yT8GAgXUnkdAoJisxvf33k7yO6OuoKmcTGuXPWSsm8Oh88nZicRLA9Y0rUeA==}
     engines: {node: '>=12'}
@@ -1906,6 +1952,10 @@ packages:
   encodeurl@2.0.0:
     resolution: {integrity: sha512-Q0n9HRi4m6JuGIV1eFlmvJB7ZEVxu93IrMyiMsGC0lrMJMWzRgx6WGquyfQgZVb31vhGgXnfmPNNXmxnOkRBrg==}
     engines: {node: '>= 0.8'}
+
+  entities@4.5.0:
+    resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
+    engines: {node: '>=0.12'}
 
   env-editor@0.4.2:
     resolution: {integrity: sha512-ObFo8v4rQJAE59M69QzwloxPZtd33TpYEIjtKD1rrFDcM1Gd7IkDxEBU+HriziN6HSHQnBJi8Dmy+JWkav5HKA==}
@@ -2584,6 +2634,9 @@ packages:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
     engines: {node: '>= 0.4'}
 
+  mdn-data@2.0.14:
+    resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}
+
   memoize-one@5.2.1:
     resolution: {integrity: sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==}
 
@@ -2810,6 +2863,9 @@ packages:
     resolution: {integrity: sha512-sHGJy8sOC1YraBywpzQlIKBE4pBbGbiF95U6Auspzyem956E0+FtDtsx1ZxlOJkQCZ1AFXAY/yuvtFYrOxF+Bw==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
+  nth-check@2.1.1:
+    resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
+
   nullthrows@1.1.1:
     resolution: {integrity: sha512-2vPPEi+Z7WqML2jZYddDIfy5Dqb0r2fze2zTxNNknZaFpVHU3mFB3R+DWeJWGVx0ecvttSGlJTI+WG+8Z4cDWw==}
 
@@ -3032,6 +3088,12 @@ packages:
 
   react-native-screens@4.16.0:
     resolution: {integrity: sha512-yIAyh7F/9uWkOzCi1/2FqvNvK6Wb9Y1+Kzn16SuGfN9YFJDTbwlzGRvePCNTOX0recpLQF3kc2FmvMUhyTCH1Q==}
+    peerDependencies:
+      react: '*'
+      react-native: '*'
+
+  react-native-svg@15.12.1:
+    resolution: {integrity: sha512-vCuZJDf8a5aNC2dlMovEv4Z0jjEUET53lm/iILFnFewa15b4atjVxU6Wirm6O9y6dEsdjDZVD7Q3QM4T1wlI8g==}
     peerDependencies:
       react: '*'
       react-native: '*'
@@ -4794,11 +4856,11 @@ snapshots:
 
   '@noble/hashes@1.8.0': {}
 
-  '@phantom/api-key-stamper@1.0.0-beta.10(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)':
+  '@phantom/api-key-stamper@1.0.0-beta.14(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)':
     dependencies:
-      '@phantom/base64url': 1.0.0-beta.10
-      '@phantom/crypto': 1.0.0-beta.10
-      '@phantom/sdk-types': 1.0.0-beta.10(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@phantom/base64url': 1.0.0-beta.14
+      '@phantom/crypto': 1.0.0-beta.14
+      '@phantom/sdk-types': 1.0.0-beta.14(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
       axios: 1.13.2
       bs58: 6.0.0
       buffer: 6.0.3
@@ -4809,13 +4871,13 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@phantom/base64url@1.0.0-beta.10': {}
+  '@phantom/base64url@1.0.0-beta.14': {}
 
-  '@phantom/chain-interfaces@1.0.0-beta.10(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
+  '@phantom/chain-interfaces@1.0.0-beta.14(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
     dependencies:
-      '@phantom/constants': 1.0.0-beta.10
-      '@phantom/parsers': 1.0.0-beta.10(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
-      '@phantom/sdk-types': 1.0.0-beta.10(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@phantom/constants': 1.0.0-beta.14
+      '@phantom/parsers': 1.0.0-beta.14(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
+      '@phantom/sdk-types': 1.0.0-beta.14(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - '@gql.tada/svelte-support'
       - '@gql.tada/vue-support'
@@ -4827,15 +4889,15 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@phantom/client@1.0.0-beta.22(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)':
+  '@phantom/client@1.0.0-beta.26(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)':
     dependencies:
-      '@phantom/api-key-stamper': 1.0.0-beta.10(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
-      '@phantom/base64url': 1.0.0-beta.10
-      '@phantom/constants': 1.0.0-beta.10
-      '@phantom/crypto': 1.0.0-beta.10
+      '@phantom/api-key-stamper': 1.0.0-beta.14(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@phantom/base64url': 1.0.0-beta.14
+      '@phantom/constants': 1.0.0-beta.14
+      '@phantom/crypto': 1.0.0-beta.14
       '@phantom/openapi-wallet-service': 0.1.11
-      '@phantom/sdk-types': 1.0.0-beta.10(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
-      '@phantom/utils': 1.0.0-beta.22
+      '@phantom/sdk-types': 1.0.0-beta.14(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@phantom/utils': 1.0.0-beta.26
       axios: 1.13.2
       bs58: 6.0.0
       buffer: 6.0.3
@@ -4846,24 +4908,24 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@phantom/constants@1.0.0-beta.10': {}
+  '@phantom/constants@1.0.0-beta.14': {}
 
-  '@phantom/crypto@1.0.0-beta.10':
+  '@phantom/crypto@1.0.0-beta.14':
     dependencies:
       bs58: 5.0.0
       buffer: 6.0.3
       tweetnacl: 1.0.3
 
-  '@phantom/embedded-provider-core@1.0.0-beta.22(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
+  '@phantom/embedded-provider-core@1.0.0-beta.26(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
     dependencies:
-      '@phantom/api-key-stamper': 1.0.0-beta.10(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
-      '@phantom/base64url': 1.0.0-beta.10
-      '@phantom/chain-interfaces': 1.0.0-beta.10(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
-      '@phantom/client': 1.0.0-beta.22(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
-      '@phantom/constants': 1.0.0-beta.10
-      '@phantom/parsers': 1.0.0-beta.10(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
-      '@phantom/sdk-types': 1.0.0-beta.10(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
-      '@phantom/utils': 1.0.0-beta.22
+      '@phantom/api-key-stamper': 1.0.0-beta.14(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@phantom/base64url': 1.0.0-beta.14
+      '@phantom/chain-interfaces': 1.0.0-beta.14(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
+      '@phantom/client': 1.0.0-beta.26(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@phantom/constants': 1.0.0-beta.14
+      '@phantom/parsers': 1.0.0-beta.14(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
+      '@phantom/sdk-types': 1.0.0-beta.14(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@phantom/utils': 1.0.0-beta.26
       bs58: 6.0.0
       buffer: 6.0.3
       eventemitter3: 5.0.1
@@ -4884,12 +4946,12 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@phantom/parsers@1.0.0-beta.10(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
+  '@phantom/parsers@1.0.0-beta.14(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
     dependencies:
-      '@phantom/base64url': 1.0.0-beta.10
-      '@phantom/constants': 1.0.0-beta.10
-      '@phantom/sdk-types': 1.0.0-beta.10(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
-      '@phantom/utils': 1.0.0-beta.22
+      '@phantom/base64url': 1.0.0-beta.14
+      '@phantom/constants': 1.0.0-beta.14
+      '@phantom/sdk-types': 1.0.0-beta.14(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@phantom/utils': 1.0.0-beta.26
       '@solana/transactions': 2.3.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)
       '@solana/web3.js': 1.98.4(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
       bs58: 6.0.0
@@ -4910,16 +4972,17 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@phantom/react-native-sdk@1.0.0-beta.22(bufferutil@4.0.9)(expo-auth-session@7.0.9(expo@54.0.25)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0))(expo-secure-store@15.0.7(expo@54.0.25))(expo-web-browser@15.0.9(expo@54.0.25)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(expo@54.0.25)(fastestsmallesttextencoderdecoder@1.0.22)(react-native-get-random-values@1.11.0(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
+  '@phantom/react-native-sdk@1.0.0-beta.26(bufferutil@4.0.9)(expo-auth-session@7.0.9(expo@54.0.25)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0))(expo-secure-store@15.0.7(expo@54.0.25))(expo-web-browser@15.0.9(expo@54.0.25)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(expo@54.0.25)(fastestsmallesttextencoderdecoder@1.0.22)(react-native-get-random-values@1.11.0(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(react-native-svg@15.12.1(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
     dependencies:
-      '@phantom/api-key-stamper': 1.0.0-beta.10(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
-      '@phantom/base64url': 1.0.0-beta.10
-      '@phantom/chain-interfaces': 1.0.0-beta.10(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
-      '@phantom/client': 1.0.0-beta.22(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
-      '@phantom/constants': 1.0.0-beta.10
-      '@phantom/crypto': 1.0.0-beta.10
-      '@phantom/embedded-provider-core': 1.0.0-beta.22(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
-      '@phantom/sdk-types': 1.0.0-beta.10(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@phantom/api-key-stamper': 1.0.0-beta.14(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@phantom/base64url': 1.0.0-beta.14
+      '@phantom/chain-interfaces': 1.0.0-beta.14(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
+      '@phantom/client': 1.0.0-beta.26(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@phantom/constants': 1.0.0-beta.14
+      '@phantom/crypto': 1.0.0-beta.14
+      '@phantom/embedded-provider-core': 1.0.0-beta.26(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
+      '@phantom/sdk-types': 1.0.0-beta.14(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@phantom/wallet-sdk-ui': 1.0.0-beta.5(react-native-svg@15.12.1(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
       '@types/bs58': 5.0.0
       bs58: 6.0.0
       buffer: 6.0.3
@@ -4930,6 +4993,7 @@ snapshots:
       react: 19.1.0
       react-native: 0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)
       react-native-get-random-values: 1.11.0(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))
+      react-native-svg: 15.12.1(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
     transitivePeerDependencies:
       - '@gql.tada/svelte-support'
       - '@gql.tada/vue-support'
@@ -4941,7 +5005,7 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@phantom/sdk-types@1.0.0-beta.10(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)':
+  '@phantom/sdk-types@1.0.0-beta.14(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@phantom/openapi-wallet-service': 0.1.11
       '@solana/web3.js': 1.98.4(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
@@ -4953,7 +5017,14 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@phantom/utils@1.0.0-beta.22': {}
+  '@phantom/utils@1.0.0-beta.26': {}
+
+  '@phantom/wallet-sdk-ui@1.0.0-beta.5(react-native-svg@15.12.1(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)':
+    dependencies:
+      react: 19.1.0
+    optionalDependencies:
+      react-native: 0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)
+      react-native-svg: 15.12.1(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -5848,6 +5919,8 @@ snapshots:
 
   bn.js@5.2.2: {}
 
+  boolbase@1.0.0: {}
+
   borsh@0.7.0:
     dependencies:
       bn.js: 5.2.2
@@ -6071,6 +6144,21 @@ snapshots:
 
   crypto-random-string@2.0.0: {}
 
+  css-select@5.2.2:
+    dependencies:
+      boolbase: 1.0.0
+      css-what: 6.2.2
+      domhandler: 5.0.3
+      domutils: 3.2.2
+      nth-check: 2.1.1
+
+  css-tree@1.1.3:
+    dependencies:
+      mdn-data: 2.0.14
+      source-map: 0.6.1
+
+  css-what@6.2.2: {}
+
   csstype@3.2.3: {}
 
   debug@2.6.9:
@@ -6109,6 +6197,24 @@ snapshots:
 
   detect-node-es@1.1.0: {}
 
+  dom-serializer@2.0.0:
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      entities: 4.5.0
+
+  domelementtype@2.3.0: {}
+
+  domhandler@5.0.3:
+    dependencies:
+      domelementtype: 2.3.0
+
+  domutils@3.2.2:
+    dependencies:
+      dom-serializer: 2.0.0
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+
   dotenv-expand@11.0.7:
     dependencies:
       dotenv: 16.4.7
@@ -6134,6 +6240,8 @@ snapshots:
   encodeurl@1.0.2: {}
 
   encodeurl@2.0.0: {}
+
+  entities@4.5.0: {}
 
   env-editor@0.4.2: {}
 
@@ -6843,6 +6951,8 @@ snapshots:
 
   math-intrinsics@1.1.0: {}
 
+  mdn-data@2.0.14: {}
+
   memoize-one@5.2.1: {}
 
   merge-stream@2.0.0: {}
@@ -7272,6 +7382,10 @@ snapshots:
       semver: 7.7.3
       validate-npm-package-name: 5.0.1
 
+  nth-check@2.1.1:
+    dependencies:
+      boolbase: 1.0.0
+
   nullthrows@1.1.1: {}
 
   ob1@0.83.2:
@@ -7490,6 +7604,14 @@ snapshots:
       react-freeze: 1.0.4(react@19.1.0)
       react-native: 0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)
       react-native-is-edge-to-edge: 1.2.1(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
+      warn-once: 0.1.1
+
+  react-native-svg@15.12.1(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0):
+    dependencies:
+      css-select: 5.2.2
+      css-tree: 1.1.3
+      react: 19.1.0
+      react-native: 0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)
       warn-once: 0.1.1
 
   react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10):
